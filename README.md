@@ -1,6 +1,6 @@
 # Authorization
 
-Simple MVC with some Router + Presenter
+Simple MVC with simple Router
 
 URLSession + Oath2 API
 Keychain
