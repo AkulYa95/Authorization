@@ -109,7 +109,8 @@ extension NetworkManager: URLSessionDelegate {
     func urlSession(_ session: URLSession,
                     didReceive challenge: URLAuthenticationChallenge,
                     completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
-        let urlCredential = URLCredential(trust: challenge.protectionSpace.serverTrust!)
+        guard let trust = challenge.protectionSpace.serverTrust else { return }
+        let urlCredential = URLCredential(trust: trust)
         completionHandler(.useCredential, urlCredential)
     }
 }
