@@ -1,4 +1,3 @@
-//
 //  SceneDelegate.swift
 //  Authorization
 //
